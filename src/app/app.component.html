@@ -11,9 +11,9 @@
         <app-appareil></app-appareil>
         <app-appareil></app-appareil>
       </ul>
-      <button class="btn btn-success" [disabled] = "!isAuth">
-        Allumet tout!
-      </button>
+      <button class="btn btn-success" 
+      [disabled]="!isAuth" 
+      (click)="onAllume()"> Allumer tout!</button>
     </div>
   </div>
 </div>
