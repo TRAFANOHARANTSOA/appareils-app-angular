@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isAuth = false;
+  lastUpdate = new Date();
+
   appareils=[
     {
       name:'Machine à laver',
@@ -21,7 +23,8 @@ export class AppComponent {
       status:'éteint'
     }
     
-  ]
+  ];
+
   constructor() {
     setTimeout(
       () => {
