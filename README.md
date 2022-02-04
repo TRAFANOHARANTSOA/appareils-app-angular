@@ -30,6 +30,6 @@ Et pout términer, lancer le serveur :
 
 ![Capture d'image de la création du selector dans app.module.ts](https://i.ibb.co/TtQMm9G/selectorappareilscomponent.png)
 
-- Insérer dans une balise HTML comme suit : 
+- Insérer le selector dans le fichier `app.component.html` dans une balise HTML comme suit : 
 
 ![Capture d'image de l'insértion dans app.component.html](https://i.ibb.co/3MM0ztV/selectorappareilsinhtml.png)
