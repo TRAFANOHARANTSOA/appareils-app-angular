@@ -17,3 +17,19 @@ Ouvrez le fichier  angular.json  du dossier source de votre projet.  Dans "archi
 
 Et pout términer, lancer le serveur : 
 `ng serve`
+
+## Créer un premier component
+
+`ng generate component appareils`
+
+- Vérifier bien dans `app.module.ts` que le CLI a ajouté le component `appareilsComponent` dans l'array `declarations` et le statement Import en haut du fichier.
+
+![Capture d'image de la déclaration du component appareils dans app.module.ts](https://i.ibb.co/jTjWSCC/componentdeclaration.png)
+
+- Vérifier dans `appareils.component.ts`, le CLI a créé un selecteur `app-appareils`, nous l'insérerons dans notre code pour utiliser ce component. 
+
+![Capture d'image de la création du selector dans app.module.ts](https://i.ibb.co/vLr00Sy/componentselector.png)
+
+- Insérer dans une balise HTML comme suit : 
+
+![Capture d'image de l'insértion dans app.component.html](https://i.ibb.co/T18QBXF/insertselectorinhtml1.png)
