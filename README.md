@@ -12,4 +12,4 @@ Depuis le dossier  appareils-app-angular , télécharger Bootstrap pour l'intég
 `npm install bootstrap@<version> --save`
 
 Ouvrez le fichier  angular.json  du dossier source de votre projet.  Dans "architect/build/options", modifiez l'array  styles  comme suit :
-![]https://github.com/TRAFANOHARANTSOA/appareils-app-angular/blob/main/image/integratebootstrap.png
+![Capture d'image de l'intégration de Bootstrap dans le projet](https://i.ibb.co/k8M3Dr0/integratebootstrap.png)
