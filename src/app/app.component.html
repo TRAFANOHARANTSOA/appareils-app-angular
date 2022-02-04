@@ -1,11 +1,10 @@
-
 <app-mon-premier></app-mon-premier>
 <div class="container">
   <div class="row">
     <div class="col-xw-12">
       <h2>
         Mes appareils!
-        <p> Mise à jour le : {{ lastUpdate | date | uppercase }}</p>
+        <p> Mise à jour le : {{ lastUpdate | async | date | uppercase }}</p>
       </h2>
       <ul class="list-group">
         <app-appareil *ngFor="let appareil of appareils" 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isAuth = false;
   
-  lastUpdate = new Date();
+  lastUpdate:any = new Promise((resolve, reject) => {
+    const date = new Date();
+    setTimeout(
+      () => {
+        resolve(date);
+      }, 2000);
+   });
   
   appareils=[
     {
@@ -21,7 +28,7 @@ export class AppComponent {
     },
     {
       name:'Ordinateur',
-      status:'éteint'
+      status:'allumé'
     }
     
   ];
