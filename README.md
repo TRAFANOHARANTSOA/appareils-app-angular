@@ -33,3 +33,17 @@ Et pout términer, lancer le serveur :
 - Insérer le selector dans le fichier `app.component.html` dans une balise HTML comme suit : 
 
 ![Capture d'image de l'insértion dans app.component.html](https://i.ibb.co/3MM0ztV/selectorappareilsinhtml.png)
+
+## Liaison des données (DATABINDING)
+
+Angular permet une manipulation dynamique des éléments du DOM (Document Object Model : éléments HTML affiché par le navigateur) grâce à la liaison des données. 
+
+Il s'agit de la communication entre votre Typescript et le templace HTML. Elle prend deux directions : 
+
+- les informations venant de votre code (.ts) qui doivent être affichées dans le navigateur (.html), comme par exemple des informations que votre code (.ts) a **calculé ou récupéré sur un serveur**.  Les deux principales méthodes pour cela sont le **string interpolation** et le **property binding** ;
+
+- les informations venant du template (.html)  qui doivent être gérées par le code (.ts) : l'utilisateur a rempli un formulaire ou cliqué sur un bouton, et il faut réagir et gérer ces événements.  On parlera de **event binding** pour cela.
+
+- on parlera aussi de **two-way binding** ou **communication à double sens** dans certains cas notamment les formulaires.
+
+### String interpolation
