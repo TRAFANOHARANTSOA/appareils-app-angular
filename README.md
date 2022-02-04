@@ -7,3 +7,8 @@ J'ai commencé par créer un projet que j'ai dénommé **appareils-app-angular**
 `ng new mon-projet-angular --style=scss --skip-tests=true`
 
 N'oubliez pas d'intégrer Bootstrap à votre projet.
+Depuis le dossier  appareils-app-angular , télécharger Bootstrap pour l'intégrer au package.json du projet :
+
+`npm install bootstrap@<version> --save`
+
+Ouvrez le fichier  angular.json  du dossier source de votre projet.  Dans "architect/build/options", modifiez l'array  styles  comme suit :
