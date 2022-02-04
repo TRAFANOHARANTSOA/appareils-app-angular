@@ -13,23 +13,23 @@ Depuis le dossier  appareils-app-angular , télécharger Bootstrap pour l'intég
 
 Ouvrez le fichier  angular.json  du dossier source de votre projet.  Dans "architect/build/options", modifiez l'array  styles  comme suit :
 
-![Capture d'image de l'intégration de Bootstrap dans le projet](https://i.ibb.co/k8M3Dr0/integratebootstrap.png)
+![Capture d'image de l'intégration de Bootstrap dans le projet](https://i.ibb.co/RYy3Qzf/bootstrap.png)
 
 Et pout términer, lancer le serveur : 
 `ng serve`
 
 ## Créer un premier component
 
-`ng generate component appareils`
+`ng generate component appareil`
 
-- Vérifier bien dans `app.module.ts` que le CLI a ajouté le component `appareilsComponent` dans l'array `declarations` et le statement Import en haut du fichier.
+- Vérifier bien dans `app.module.ts` que le CLI a ajouté le component `appareilComponent` dans l'array `declarations` et le statement Import en haut du fichier.
 
-![Capture d'image de la déclaration du component appareils dans app.module.ts](https://i.ibb.co/jTjWSCC/componentdeclaration.png)
+![Capture d'image de la déclaration du component appareil dans app.module.ts](https://i.ibb.co/p2vBD66/importappareilcomponent.png)
 
-- Vérifier dans `appareils.component.ts`, le CLI a créé un selecteur `app-appareils`, nous l'insérerons dans notre code pour utiliser ce component. 
+- Vérifier dans `appareil.component.ts`, le CLI a créé un selecteur `app-appareil`, nous l'insérerons dans notre code pour utiliser ce component. 
 
-![Capture d'image de la création du selector dans app.module.ts](https://i.ibb.co/vLr00Sy/componentselector.png)
+![Capture d'image de la création du selector dans app.module.ts](https://i.ibb.co/TtQMm9G/selectorappareilscomponent.png)
 
 - Insérer dans une balise HTML comme suit : 
 
-![Capture d'image de l'insértion dans app.component.html](https://i.ibb.co/T18QBXF/insertselectorinhtml1.png)
+![Capture d'image de l'insértion dans app.component.html](https://i.ibb.co/3MM0ztV/selectorappareilsinhtml.png)
