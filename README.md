@@ -33,6 +33,10 @@ J'ai créé un component nommé appareil :
 
 ![Capture d'image de la création du selector dans app.module.ts](https://i.ibb.co/TtQMm9G/selectorappareilscomponent.png)
 
+- Ouvrez `appareil.component.html`  (dans le nouveau dossier  appareil  créé par le CLI), supprimez le contenu, et entrez le code ci-dessous : 
+
+![Capture d'image de l'insértion dans appareil.component.html](https://i.ibb.co/CMnpgzQ/appareil-component-html.png)
+
 - Insérer le selector dans le fichier `app.component.html` dans une balise HTML comme suit : 
 
 ![Capture d'image de l'insértion dans app.component.html](https://i.ibb.co/3MM0ztV/selectorappareilsinhtml.png)
@@ -50,19 +54,19 @@ Cette communication entre votre Typescript et le templace HTML prend deux direct
 
 - on parlera aussi de **two-way binding** ou **communication à double sens** dans certains cas notamment les formulaires.
 
-### String interpolation
-L'interpolation est la manière la plus basique d'émettre des données issues de votre code TypeScript. Imaginez une application qui vérifie l'état de vos appareils électriques à la maison pour voir s'ils sont allumés ou non. 
-Ensuite, ouvrez  app.component.html , et remplacez tout le contenu comme suit :
+### **String interpolation**
+L'interpolation est la manière la plus basique d'émettre des données issues de votre code TypeScript. 
+Dans `appareil.component.ts`,  j'ai inséré le code suivant en haut de la déclaration de classe : 
 
-![Capture d'image de app.component.html](https://i.ibb.co/02LJDd8/appareilhtmlbootstrap.png)
+![Capture d'image de la création de la variable appareilName](https://i.ibb.co/v3yQsLL/cr-ationvariableappareil-Name.png)
+
 
 Insérez le code suivant dans  `appareil.component.html` :
 
 ![Capture d'image de appreil.component.html](https://i.ibb.co/qDFSGCf/stringinterpolationappareil-Name.png)
 
 
-La syntaxe pour l'interpolation : les doubles accolades  `{{ }}` exprime la variable `appareilName` qui sera instanciée dans le code Typescript.  Pour l'instant, elle n'est pas créée, le navigateur n'affiche rien.
+La syntaxe pour l'interpolation : les doubles accolades  `{{ }}` exprime la variable `appareilName` qui est instanciée dans le code Typescript. Si on rafraîchit le navigateur, on obtient ceci :
 
-Dans `appareil.component.ts`,  j'ai inséré le code suivant en haut de la déclaration de classe : 
+<!-- Imaginez une application qui vérifie l'état de vos appareils électriques à la maison pour voir s'ils sont allumés ou non.  -->
 
-![Capture d'image de la création de la variable appareilName](https://i.ibb.co/v3yQsLL/cr-ationvariableappareil-Name.png)
