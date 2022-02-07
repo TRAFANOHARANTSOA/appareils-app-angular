@@ -46,7 +46,7 @@ J'ai créé un component nommé appareil :
 
 Angular permet une manipulation dynamique des éléments du DOM (Document Object Model : éléments HTML affiché par le navigateur) grâce à la liaison des données. 
 
-Cette communication entre votre Typescript et le templace HTML prend deux directions : 
+Cette communication entre votre Typescript et le template HTML prend deux directions : 
 
 - les informations venant de votre code (.ts) qui doivent être affichées dans le navigateur (.html), comme par exemple des informations que votre code (.ts) a **calculé ou récupéré sur un serveur**.  Les deux principales méthodes pour cela sont le **string interpolation** et le **property binding** ;
 
@@ -67,6 +67,9 @@ Insérez le code suivant dans  `appareil.component.html` :
 
 
 La syntaxe pour l'interpolation : les doubles accolades  `{{ }}` exprime la variable `appareilName` qui est instanciée dans le code Typescript. Si on rafraîchit le navigateur, on obtient ceci :
+
+![Capture d'image du navigateur](https://i.ibb.co/KjYz18x/navigateur1.png)
+
 
 <!-- Imaginez une application qui vérifie l'état de vos appareils électriques à la maison pour voir s'ils sont allumés ou non.  -->
 
