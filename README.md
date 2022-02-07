@@ -1,5 +1,7 @@
 # APPAREILS-APP-ANGULAR
-Toujours dans le cadre de mon auto-formation sur Angular, j'ai décidé de documenter mon parcours. Je livre içi toutes les étapes développement d'une application simple de gestion de l'état des appareils domestiques. Je rappel que ce cours existe sur openclassroom.
+Toujours dans le cadre de mon auto-formation sur Angular, j'ai décidé de documenter mon parcours. Je livre içi toutes les étapes de développement d'une application simple sur Angular. Je rappel que ce cours existe sur openclassroom.
+
+Prenons l'exemple dans le cours pour développer une application de gestion d'appareils domestiques.
 
 ## Créer un nouveau projet
 J'ai commencé par créer un projet que j'ai dénommé **appareils-app-angular**.
@@ -19,6 +21,7 @@ Et pout términer, lancer le serveur :
 `ng serve`
 
 ## Créer un premier component
+J'ai créé un component nommé appareil :
 
 `ng generate component appareil`
 
@@ -38,7 +41,7 @@ Et pout términer, lancer le serveur :
 
 Angular permet une manipulation dynamique des éléments du DOM (Document Object Model : éléments HTML affiché par le navigateur) grâce à la liaison des données. 
 
-Il s'agit de la communication entre votre Typescript et le templace HTML. Elle prend deux directions : 
+Cette communication entre votre Typescript et le templace HTML prend deux directions : 
 
 - les informations venant de votre code (.ts) qui doivent être affichées dans le navigateur (.html), comme par exemple des informations que votre code (.ts) a **calculé ou récupéré sur un serveur**.  Les deux principales méthodes pour cela sont le **string interpolation** et le **property binding** ;
 
