@@ -37,6 +37,7 @@ J'ai créé un component nommé appareil :
 
 ![Capture d'image de l'insértion dans app.component.html](https://i.ibb.co/3MM0ztV/selectorappareilsinhtml.png)
 
+
 ## Liaison des données (DATABINDING)
 
 Angular permet une manipulation dynamique des éléments du DOM (Document Object Model : éléments HTML affiché par le navigateur) grâce à la liaison des données. 
@@ -50,3 +51,18 @@ Cette communication entre votre Typescript et le templace HTML prend deux direct
 - on parlera aussi de **two-way binding** ou **communication à double sens** dans certains cas notamment les formulaires.
 
 ### String interpolation
+L'interpolation est la manière la plus basique d'émettre des données issues de votre code TypeScript. Imaginez une application qui vérifie l'état de vos appareils électriques à la maison pour voir s'ils sont allumés ou non. 
+Ensuite, ouvrez  app.component.html , et remplacez tout le contenu comme suit :
+
+![Capture d'image de app.component.html](https://i.ibb.co/02LJDd8/appareilhtmlbootstrap.png)
+
+Insérez le code suivant dans  `appareil.component.html` :
+
+![Capture d'image de appreil.component.html](https://i.ibb.co/qDFSGCf/stringinterpolationappareil-Name.png)
+
+
+La syntaxe pour l'interpolation : les doubles accolades  `{{ }}` exprime la variable `appareilName` qui sera instanciée dans le code Typescript.  Pour l'instant, elle n'est pas créée, le navigateur n'affiche rien.
+
+Dans `appareil.component.ts`,  j'ai inséré le code suivant en haut de la déclaration de classe : 
+
+![Capture d'image de la création de la variable appareilName](https://i.ibb.co/v3yQsLL/cr-ationvariableappareil-Name.png)
