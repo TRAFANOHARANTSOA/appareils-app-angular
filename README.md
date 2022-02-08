@@ -52,7 +52,7 @@ Cette communication entre votre Typescript et le template HTML prend deux direct
 
 - on parlera aussi de **two-way binding** ou **communication à double sens** dans certains cas notamment les formulaires.
 
-### **L'interpolation (String interpolation) **
+### L'interpolation (String interpolation)
 L'interpolation est la manière la plus basique d'émettre des données issues de votre code TypeScript. 
 Dans `appareil.component.ts`,  j'ai inséré le code suivant en haut de la déclaration de classe : 
 
