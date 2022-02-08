@@ -74,5 +74,15 @@ Cette technique permet :
     - d'afficher le contenu de notre variable `appareilName`
     - de modifier dynamiquement les propriétés d'un élément du DOM en fonction de données dans le TypeScript
 
-Pour notre application, l'utilisateur **authentifié** aura la possibilité d'allumer tous les appareils.
+Pour notre application, l'utilisateur **authentifié** aura la possibilité d'allumer tous les appareils. Pour ce faire, un bouton 'Tout allumer' sera désactivé par la propriété `disabled`. Cette propriété sera liée à une variable dans le code Typescript. La syntaxe du property binding est le double crochet `[]`.  
 
+Pour simuler une authentification (valeur globale), il faut qu'on déclare une variable boolean dans `AppComponent`. Sa valeur sera modifiée au bout de 4 secondes par une méthode  `constructor` dans laquelle un timeout est mis en place. Cette modification de valeur de notre variable impactera la proriété du bouton. Le bouton sera activé quand cet appel d'API imaginaire sera effectué.   
+
+![Capture d'image de variable isAuth](https://i.ibb.co/ZXcZL54/isAuth.png)
+
+
+Le point d'exclamation fait que le bouton est désactivé lorsque  isAuth === false .
+
+![Capture d'image de bouton isAuth](https://i.ibb.co/52W1Pt6/boutonis-Auth.png)
+
+La propriété de l'élément du DOM a été modifiée dynamiquement affectant ainsi son état. Le bouton est passé de l'état inactif à actif.
