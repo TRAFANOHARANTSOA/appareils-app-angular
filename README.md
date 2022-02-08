@@ -138,5 +138,4 @@ Maintenant, utilisez les crochets  `[]` pour lier le contenu de ces variables à
 
 ![Capture d'image des proprietes perso et property binding](https://i.ibb.co/xYMVvVK/proprietepersonnalisenometetat.png)
 
-
-<h2 id="les-directives">Les Directives</h2>
+## Les Directives{#les-directives}
