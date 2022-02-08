@@ -1,7 +1,5 @@
 # APPAREILS-APP-ANGULAR
-Toujours dans le cadre de mon auto-formation sur Angular, j'ai décidé de documenter mon parcours. Je livre içi toutes les étapes de développement d'une application simple sur Angular. Je rappel que ce cours existe sur openclassroom.
-
-Prenons l'exemple dans le cours pour développer une application de gestion d'appareils domestiques.
+Toujours dans le cadre de mon auto-formation sur Angular, je documente içi les étapes de développement d'une application simple qui gère des appareils éléctriques. Elle vérifie l'état des appareils, s'ils sont allumés ou non. Des actions 'tout allumer' ou 'tout éteindre'  ou autres sont possibles. Je rappel que je me suis basé sur le cours d'Openclassroom.
 
 ## Créer un nouveau projet
 J'ai commencé par créer un projet que j'ai dénommé **appareils-app-angular**.
@@ -54,7 +52,7 @@ Cette communication entre votre Typescript et le template HTML prend deux direct
 
 - on parlera aussi de **two-way binding** ou **communication à double sens** dans certains cas notamment les formulaires.
 
-### **String interpolation**
+### **L'interpolation (String interpolation) **
 L'interpolation est la manière la plus basique d'émettre des données issues de votre code TypeScript. 
 Dans `appareil.component.ts`,  j'ai inséré le code suivant en haut de la déclaration de classe : 
 
@@ -66,10 +64,15 @@ Insérez le code suivant dans  `appareil.component.html` :
 ![Capture d'image de appreil.component.html](https://i.ibb.co/qDFSGCf/stringinterpolationappareil-Name.png)
 
 
-La syntaxe pour l'interpolation : les doubles accolades  `{{ }}` exprime la variable `appareilName` qui est instanciée dans le code Typescript. Si on rafraîchit le navigateur, on obtient ceci :
+La syntaxe pour l'interpolation : les doubles accolades  `{{ }}` exprime la variable `appareilName` '(ou toutes expressions Typescript valable : méthodes, fonctions) qui est instanciée dans le code Typescript. Si on rafraîchit le navigateur, on obtient ceci :
 
 ![Capture d'image du navigateur](https://i.ibb.co/KjYz18x/navigateur1.png)
 
+### **La liaison par propriété (Property binding)**
+Cette technique permet :
 
-<!-- Imaginez une application qui vérifie l'état de vos appareils électriques à la maison pour voir s'ils sont allumés ou non.  -->
+    - d'afficher le contenu de notre variable `appareilName`
+    - de modifier dynamiquement les propriétés d'un élément du DOM en fonction de données dans le TypeScript
+
+Pour notre application, l'utilisateur ==authentifié== aura la possibilité d'allumer tous les appareils.
 
