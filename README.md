@@ -151,3 +151,10 @@ Dans le fichier `appreil.component.html` J'ai ajouté une `<div>` avec `style` C
 
 ![Capture d'image de ngIFresult](https://i.ibb.co/McRcKyq/ng-IFresult.png)
 
+Supposons que nous récuperons un `array` contenant les appareils et leurs états depuis un serveur. Pour l'instant, je vais créé cet `array` directement dans `app.component.ts` :
+
+![Capture d'image de Array](https://i.ibb.co/P58Gsgd/array.png)
+
+Chaque objet a une propriété `name` et une propriété `status`. J'utilise la deuxième directive structurelle `*ngFor="let appareil of appareils"`. Elle affiche une itération de l'objet `appareil` de l'array `appareils`. Après cette directive, j'utilise l'objet  `appareil`, à l'intérieur d'une balise HTML. Les propriétés  `name`  et  `status`  de cet objet sont passés par le property binding dans les propriétés de cet balise HTML qui sont notamments `appareilName` et `appareilStatus`.
+
+![Capture d'image de ngFor](https://i.ibb.co/Dz7yZtk/ngFor.png)
