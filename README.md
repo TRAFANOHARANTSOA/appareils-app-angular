@@ -139,3 +139,15 @@ Maintenant, utilisez les crochets  `[]` pour lier le contenu de ces variables à
 ![Capture d'image des proprietes perso et property binding](https://i.ibb.co/xYMVvVK/proprietepersonnalisenometetat.png)
 
 ## Les Directives
+
+Ce sont des instructions intégrées dans le DOM. On peut en créer ou uitilisé celles fournies avec ANGULAR.
+
+### Les directives structurelles
+Pour notre application, nous allons mettre place un témoin rouge qui ne s'affiche que si l'appareil est éteint. Pour cela il nous faut utiliser la directive structurelle `*ngIf`. Un component auquel on ajoute la directive  `*ngIf="condition"`  ne s'affichera que si la condition est "truthy" (elle retourne la valeur  true  où la variable mentionnée est définie et non-nulle), comme un statement  if  classique. Testons!
+
+Dans le fichier `appreil.component.html` J'ai ajouté une `<div>` avec `style` CSS et ma directive comme ceci :
+
+![Capture d'image de ngIF](https://i.ibb.co/Dftypft/ngIf.png)
+
+![Capture d'image de ngIFresult](https://i.ibb.co/McRcKyq/ng-IFresult.png)
+
