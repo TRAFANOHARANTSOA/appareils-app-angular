@@ -71,8 +71,8 @@ La syntaxe pour l'interpolation : les doubles accolades  `{{ }}` exprime la vari
 ### La liaison par propriété (Property binding)
 Cette technique permet :
 
-    -d'afficher le contenu de notre variable `appareilName`
-    -de modifier dynamiquement les propriétés d'un élément du DOM en fonction de données dans le TypeScript
+- d'afficher le contenu de notre variable `appareilName`
+- de modifier dynamiquement les propriétés d'un élément du DOM en fonction de données dans le TypeScript
 
 Pour notre application, l'utilisateur **authentifié** aura la possibilité d'allumer tous les appareils. Pour ce faire, un bouton 'Tout allumer' sera désactivé par la propriété `disabled`. Cette propriété sera liée à une variable dans le code Typescript. La syntaxe du property binding est le double crochet `[]`.  
 
