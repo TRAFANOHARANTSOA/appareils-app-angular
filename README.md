@@ -105,7 +105,7 @@ Pour pouvoir utiliser le two-way binding, il faut importer  `FormsModule`  depui
 
 ![Capture d'image de l'import FormsModule](https://i.ibb.co/LxSpsSV/twowaybindingimport.png)
 
-J'ai tésté sur l'application en insérant un `<input>` dans `appareil.component.html`. Ici, j'utilise une directive `ngModel` pour le lier à `appareilName`. Je précise qu'il y a une partie dédiée aux directives plus loin dans ce document.
+J'ai tésté sur l'application en insérant un `<input>` dans `appareil.component.html`. Ici, j'utilise une directive `ngModel` pour le lier à `appareilName`. Je précise qu'il y a une partie dédiée aux [directives](#directives) plus loin dans ce document.
 
 ![Capture d'image de l'input](https://i.ibb.co/yQk7Wss/input.png)
 
@@ -137,3 +137,5 @@ J'ouvre le fichier `app.component.ts` et j'instancie trois variable avec les nom
 Maintenant, utilisez les crochets  `[]` pour lier le contenu de ces variables à la propriété du component dans `app.component.html` :
 
 ![Capture d'image des proprietes perso et property binding](https://i.ibb.co/xYMVvVK/proprietepersonnalisenometetat.png)
+
+## Les Directives {#directives}
