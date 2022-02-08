@@ -56,15 +56,15 @@ Cette communication entre votre Typescript et le template HTML prend deux direct
 L'interpolation est la manière la plus basique d'émettre des données issues de votre code TypeScript. 
 Dans `appareil.component.ts`,  j'ai inséré le code suivant en haut de la déclaration de classe : 
 
-![Capture d'image de la création de la variable appareilName](https://i.ibb.co/v3yQsLL/cr-ationvariableappareil-Name.png)
+![Capture d'image de la création de la variable appareilName](https://i.ibb.co/ZWwMjKD/cr-ationvariableappareil-Name.png)
 
 
 Insérez le code suivant dans  `appareil.component.html` :
 
-![Capture d'image de appreil.component.html](https://i.ibb.co/qDFSGCf/stringinterpolationappareil-Name.png)
+![Capture d'image de appreil.component.html](https://i.ibb.co/8KpCNPT/stringinterpolationappareil-Name.png)
 
 
-La syntaxe pour l'interpolation : les doubles accolades  `{{ }}` exprime la variable `appareilName` '(ou toutes expressions Typescript valable : méthodes, fonctions) qui est instanciée dans le code Typescript. Si on rafraîchit le navigateur, on obtient ceci :
+La syntaxe pour l'interpolation : les doubles accolades  `{{ }}` exprime la variable `appareilName` '(ou toutes expressions Typescript valable : méthodes, fonctions) qui est instanciée dans le code Typescript. Içi la méthode `getStatus()` fonctionne de la même manière. Si on rafraîchit le navigateur, on obtient ceci :
 
 ![Capture d'image du navigateur](https://i.ibb.co/KjYz18x/navigateur1.png)
 
@@ -98,3 +98,15 @@ Ajoutons dans `app.component.ts` la méthode `onAllumer()`. Ici il sert juste à
 
 ![Capture d'image de la méthode onAllumer()](https://i.ibb.co/gvv5sbt/on-Allumer.png)
 
+### Liaison à double sens (Two way binding)
+Cette technique résulte de la combinaison de la property binding et event binding. Par conséquent, elle emploie le mélange des syntaxes : des crochets et des parenthèses  `[()]`.
+
+Pour pouvoir utiliser le two-way binding, il faut importer  `FormsModule`  depuis  `@angular/forms`   dans votre application.  Vous pouvez accomplir cela en l'ajoutant à l'array  ``imports``  de votre  ``AppModule``  (sans oublier d'ajouter le statement  ``import``  correspondant en haut du fichier) : 
+
+![Capture d'image de l'import FormsModule](https://i.ibb.co/LxSpsSV/twowaybindingimport.png)
+
+J'ai inséré un `<input>` dans `appareil.component.html`. Ici, j'utilise une directive `ngModel` pour le lier à `appareilName`. Je précise qu'il y a une partie dédiée aux directives plus loin dans ce document.
+
+![Capture d'image de l'input](https://i.ibb.co/yQk7Wss/input.png)
+
+Dans le navigateur, si vous modifiez le nom `<input>`, le contenu du  titre `<h4>` change.  Ainsi vous voyez également que chaque instance du component  AppareilComponent  est entièrement indépendante une fois créée : le fait d'en modifier une ne change rien aux autres.  Ce concept est très important, et il s'agit de l'une des plus grandes utilités d'Angular.
