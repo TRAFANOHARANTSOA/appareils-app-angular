@@ -86,3 +86,15 @@ Ajoutez maintenant un bouton au template global `app.component.html `, en dessou
 ![Capture d'image de bouton isAuth](https://i.ibb.co/52W1Pt6/boutonis-Auth.png)
 
 La propriété de l'élément du DOM a été modifiée dynamiquement affectant ainsi son état. Le bouton est passé de l'état inactif à actif.
+
+### Liaison à un événement (Event binding)
+Jusque là, les données viennent du Typescript vers le Template. L'event binding vas dans le sens inverse. Les données en l'occurence des événements, viennent du Template HTML. On utilise les parenthèses  `()`  pour créer une liaison à un événement.
+
+Revenons à notre application, notre bouton pour l'instant ne fait rien. Il s'active juste au bout de 4 secondes soit une simulation d'appel à un API d'authentification. Içi, je vais ajouté l'évenement `click` en propriété à mon bouton. De même, je crée une méthode `onAllumer()`   qui n'existe pas encore `app.component.ts`.
+
+
+
+Ajoutons dans `app.component.ts` la méthode `onAllumer()`. Ici il sert juste à afficher le message dans la console:
+
+![Capture d'image de la méthode onAllumer()](https://i.ibb.co/gvv5sbt/on-Allumer.png)
+
