@@ -81,7 +81,7 @@ Pour simuler une authentification (valeur globale), il faut qu'on déclare une v
 ![Capture d'image de variable isAuth](https://i.ibb.co/ZXcZL54/isAuth.png)
 
 
-Le point d'exclamation fait que le bouton est désactivé lorsque  isAuth === false .
+Ajoutez maintenant un bouton au template global `app.component.html `, en dessous de la liste d'appareils. Le point d'exclamation fait que le bouton est désactivé lorsque  `isAuth === false`.
 
 ![Capture d'image de bouton isAuth](https://i.ibb.co/52W1Pt6/boutonis-Auth.png)
 
