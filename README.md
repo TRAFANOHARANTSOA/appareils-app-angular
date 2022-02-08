@@ -109,4 +109,4 @@ J'ai inséré un `<input>` dans `appareil.component.html`. Ici, j'utilise une di
 
 ![Capture d'image de l'input](https://i.ibb.co/yQk7Wss/input.png)
 
-Dans le navigateur, si vous modifiez le nom `<input>`, le contenu du  titre `<h4>` change.  Ainsi vous voyez également que chaque instance du component  AppareilComponent  est entièrement indépendante une fois créée : le fait d'en modifier une ne change rien aux autres.  Ce concept est très important, et il s'agit de l'une des plus grandes utilités d'Angular.
+Dans le navigateur, si vous modifiez le nom `<input>`, le contenu du  titre `<h4>` change.  Il est important de souligner que chaque instance du component  `AppareilComponent`  est entièrement indépendante une fois créée : le fait d'en modifier une ne change rien aux autres.
