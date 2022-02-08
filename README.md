@@ -105,8 +105,35 @@ Pour pouvoir utiliser le two-way binding, il faut importer  `FormsModule`  depui
 
 ![Capture d'image de l'import FormsModule](https://i.ibb.co/LxSpsSV/twowaybindingimport.png)
 
-J'ai inséré un `<input>` dans `appareil.component.html`. Ici, j'utilise une directive `ngModel` pour le lier à `appareilName`. Je précise qu'il y a une partie dédiée aux directives plus loin dans ce document.
+J'ai tésté sur l'application en insérant un `<input>` dans `appareil.component.html`. Ici, j'utilise une directive `ngModel` pour le lier à `appareilName`. Je précise qu'il y a une partie dédiée aux directives plus loin dans ce document.
 
 ![Capture d'image de l'input](https://i.ibb.co/yQk7Wss/input.png)
 
 Dans le navigateur, si vous modifiez le nom `<input>`, le contenu du  titre `<h4>` change.  Il est important de souligner que chaque instance du component  `AppareilComponent`  est entièrement indépendante une fois créée : le fait d'en modifier une ne change rien aux autres.
+
+### Propriété personnalisée
+
+L'intérêt de la création des propriétés personnalisées (ou événement) est de pouvoir transmettre des données depuis l'extérieur vers un component. Il faut utiliser le décorateur  `@Input()` et ne pas définir de valeur stricte à la variable lors de sa déclaration. Mais au préalable, il faut importé `input` depuis `@angular/core` dans `appareil.component.ts` en haut du fichier.  
+
+Testons sur notre applications des appareils élétriques. 
+
+![Capture d'image du décorateur](https://i.ibb.co/qd2F9B9/input.png)
+
+Vous pouvez également créer une propriété pour régler l'état de l'appareil.
+
+![Capture d'image du décorateur](https://i.ibb.co/bgMWhPq/decorateurinputetatappareil.png)
+
+
+Voilà ce qui se passe, `@Input` a créé une propriété appareilName qu'on pourra fixer sur la balise `<app-appareil>`:
+
+![Capture d'image des propriétés perso](https://i.ibb.co/wLNpfw4/proprietepersonnalise.png)
+
+C'est une première étape intéressante, mais ce serait encore plus dynamique de pouvoir passer des variables depuis  `AppComponent`  pour nommer les appareils. On peut imaginer une autre partie de l'application qui récupérerait ces noms depuis un serveur, par exemple.  Heureusement, vous savez déjà utiliser le property binding !
+
+J'ouvre le fichier `app.component.ts` et j'instancie trois variable avec les noms des appareils :
+
+![Capture d'image des trois variables](https://i.ibb.co/XycvSDz/troisvariable.png)
+
+Maintenant, utilisez les crochets  `[]` pour lier le contenu de ces variables à la propriété du component dans `app.component.html` :
+
+![Capture d'image des proprietes perso et property binding](https://i.ibb.co/xYMVvVK/proprietepersonnalisenometetat.png)
