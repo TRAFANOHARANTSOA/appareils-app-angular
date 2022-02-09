@@ -258,13 +258,13 @@ J'injecte ce service dans `app.module.ts` et j'ajoute un array `providers`. L'im
 
 ![Capture d'image injectappareilservice](https://i.ibb.co/nbw4sHP/injectappareilservice.png)
 
-Maintenant que l'instance du service est créé, je vais l'intégré dans `app.component.ts`. Pour ce faire, on on le déclare comme argument dans son constructeur sans oublier de l'importé en h:aut du fichier :
+Maintenant que l'instance du service est créé, je vais l'intégré dans `app.component.ts`. Pour ce faire, on le déclare comme argument dans son constructeur sans oublier de l'importer en haut du fichier :
 
 ![Capture d'image constructappareilservice](https://i.ibb.co/PFtpmGK/constructappareilservice.png)
 
 ### Utilisation des services
 
-Je copie depuis  `AppComponent` l'array `appareils`. Je le colle  `AppareilService`. Je retourne dans  AppComponent  et je déclare  `appareils`  simplement comme un array de type  `any`.
+Je copie depuis  `app.component.ts` l'array `appareils`. Je le colle  dans `appareil.service.ts`. Je retourne dans  AppComponent  et je déclare  `appareils`  simplement comme un array de type  `any`.
 
 
 
