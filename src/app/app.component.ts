@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { AppareilService } from '@angular/core';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
-})
+});
+
 export class AppComponent {
   isAuth = false;
   
@@ -33,7 +35,7 @@ export class AppComponent {
     
   ];
 
-  constructor() {
+  constructor(private appareilService: AppareilService) {
     setTimeout(
       () => {
         this.isAuth = true;
