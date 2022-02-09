@@ -240,7 +240,14 @@ Trois possibilités existes:
 2. Dans `app.component.ts` = une instance accéssible à tous les components mais pas aux autres services.
 3. Dans un autre component = instance accéssible uniquement au component lui même et ses enfants.
 
-Pour mon application, je vais utilisé la première option, dans `app.module.ts`. Pour commencer, je crée un sous dossier `services` dans mon dossier `app`. Je crée le fichier `appareil.services.ts` dans lequel je glisse le code ci-dessous.
+
+
+
+Pour mon application, je vais utilisé la première option, dans `app.module.ts`. Je vais intégré à mon application un service nommé `AppareilService`  qui contiendrait les données des appareils électriques, et également des fonctions globales liées aux appareils, comme "tout allumer" ou "tout éteindre".  
+
+Plus tard, j'intégrerais aussi deuxième service  `AuthService`  qui s'occuperait de vérifier l'authentification de l'utilisateur, et qui pourrait également stocker des informations sur l'utilisateur actif comme son adresse mail et son pseudo.
+
+Pour commencer, je crée un sous dossier `services` dans mon dossier `app`. Je crée le fichier `appareil.services.ts` dans lequel je glisse le code ci-dessous.
 
 ```
 export class AppareilServices {
@@ -254,4 +261,6 @@ J'injecte ce service dans `app.module.ts` et j'ajoute un array `providers`. L'im
 Maintenant que l'instance du service est créé, je vais l'intégré dans `app.component.ts`. Pour ce faire, on on le déclare comme argument dans son constructeur sans oublier de l'importé en haut du fichier :
 
 ![Capture d'image constructappareilservice](https://i.ibb.co/PFtpmGK/constructappareilservice.png)
+
+### Utilisation des services
 
