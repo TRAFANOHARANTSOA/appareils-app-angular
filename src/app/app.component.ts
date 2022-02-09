@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppareilService } from './services/appareil.service';
 
 
@@ -6,10 +6,11 @@ import { AppareilService } from './services/appareil.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
-});
+})
 
 export class AppComponent {
   isAuth = false;
+  appareils: any[] |undefined;
   
   lastUpdate:any = new Promise((resolve, reject) => {
     const date = new Date();
@@ -19,22 +20,6 @@ export class AppComponent {
       }, 2000);
    });
   
-  appareils=[
-    {
-      name:'Machine à laver',
-      status:'éteint'
-    },
-    {
-      name:'Télévision',
-      status:'allumé'
-    },
-    {
-      name:'Ordinateur',
-      status:'allumé'
-    }
-    
-  ];
-
   constructor(private appareilService: AppareilService) {
     setTimeout(
       () => {
@@ -42,7 +27,13 @@ export class AppComponent {
       }, 4000
       );
   }
+
+  ngOnInit(){
+    this.appareils = this.appareilService.appareils;
+  }
+
   onAllume(){
     console.log("On allume tout!");
   }
+
 }
