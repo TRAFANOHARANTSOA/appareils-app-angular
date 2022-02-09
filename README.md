@@ -177,3 +177,47 @@ On peut aller plus loin, modifions maintenant la couleur de la balise `<li>` pou
 
 ![Capture d'image de li colored](https://i.ibb.co/Tb2dqJK/licolored.png)
 
+## Les Pipes
+Les pipes prennent des données en input, les transforment, et puis affichent les données modifiées dans le DOM.  Il y a des pipes fournis avec Angular, et vous pouvez également créer vos propres pipes si vous en avez besoin.  Je vous propose de commencer avec les pipes fournis avec Angular. Pour ajouter un `Pipe` on utilise `|`. 
+
+Ce que je vais faire c'est ajouter  à l'application la date de dernière mise à jour. J'utilise `DatePipe` qui analyse l'objet JS de type `Date` avec son encodage de base, le transforme et l'affiche sous la mise en forme que j'ai choisi.
+J'ouvre mon fichier `app.component.ts`, je crée une variable `lastUpdate`. Je vais dans mon fichier `app.component.html`, j'y affiche la variable que je vient de créer dans un paragraphe.
+
+![Capture d'image de lastUpdate](https://i.ibb.co/K06pTYV/last-Update.png)
+
+![Capture d'image de lastUpdatehtml](https://i.ibb.co/kBbnxFn/last-Updatehtml.png)
+
+L'objet Date est crée, mettons le en forme avec DatePipe. Angular permet de paramétrer DatePipe avec un argument de formatage comme suit : `| date : 'short'` :
+
+![Capture d'image de dateshort](https://i.ibb.co/7b2N5HR/dateshort.png)
+
+On peut même utiliser une chaîne de Pipes. L'image en dessous montre que j'ai paramétrer DatePipe sous un autre argument de formatage et j'ai affiché la date en majuscule.
+
+![Capture d'image chainedepipes](https://i.ibb.co/7G6P3WK/chainedepipes.png)
+
+### Pipe Async (AsyncPipe)
+
+Je voulais parlé de `async` pour mettre en exergue sa grande utilité lors de gestion de données asynchrones, que l'application doit récupérer sur un serveur par exemples. Pour le moment nous ne communiquons pas avec un serveur, mais plus tard on le fera.
+
+Je vais simuler cette communication avec une `Promise` qui sera résolue au bout de 2 secondes.
+
+Je met à jour la variable  lastUpdate  comme suit :
+
+```
+  lastUpdate:any = new Promise((resolve, reject) => {
+    const date = new Date();
+    setTimeout(
+      () => {
+        resolve(date);
+      }, 2000);
+   });
+
+```
+Si on enregistre et qu'on ouvre notre console, une erreur apparaît. En effet, au moment de générer le DOM,  `lastUpdate`  est encore une `Promise` et n'a pas de valeur modifiable par les pipes. 
+
+![Capture d'image errorasync](https://i.ibb.co/6XqvccZ/errorasync.png)
+
+Il nous faut ajouter `async` en début de chaîne pour dire à Angular d'attendre l'arrivée des données avant d'exécuter les autres pipes. 
+
+![Capture d'image asyncPipe](https://i.ibb.co/J2cgnv6/async-Pipe.png)
+
