@@ -266,5 +266,7 @@ Maintenant que l'instance du service est créé, je vais l'intégré dans `app.c
 
 Je copie depuis  `app.component.ts` l'array `appareils`. Je le colle  dans `appareil.service.ts`. Je retourne dans  AppComponent  et je déclare  `appareils`  simplement comme un array de type  `any`.
 
+![Capture d'image arrayappareils](https://i.ibb.co/7NHkQSs/copyarrayappareils.png)
 
+![Capture d'image appareilsany](https://i.ibb.co/xGH8m4s/appareilany.png)
 
