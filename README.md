@@ -221,3 +221,6 @@ Il nous faut ajouter `async` en début de chaîne pour dire à Angular d'attendr
 
 ![Capture d'image asyncPipe](https://i.ibb.co/J2cgnv6/async-Pipe.png)
 
+Une petite parenthèse, je vous renvois au repository [exercice-blog-angular](https://github.com/TRAFANOHARANTSOA/exercice-blog-angular) pour voir l'application qui gère des posts de blog que j'ai réalisé suite à ce cours :sweat:.
+
+Continuons avec 
