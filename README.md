@@ -223,4 +223,35 @@ Il nous faut ajouter `async` en début de chaîne pour dire à Angular d'attendr
 
 Une petite parenthèse, je vous renvois au repository [exercice-blog-angular](https://github.com/TRAFANOHARANTSOA/exercice-blog-angular) pour voir l'application qui gère des posts de blog que j'ai réalisé suite à ce cours :sweat:.
 
-Continuons avec 
+Continuons avec les `services`.
+
+## Les Services
+
+C'est quoi les services ? :grimacing:
+En gros, c'est un fichier qui contient des données (authentifications) ou du code (fonctions globales, etc) afin de les centraliser. Ce fichier que l'on nommera suivant le service qu'on souhaite mettre en place sera utilisé par tout ou partie de l'application. Les avantages : non répétitivité, maintenabilité, lisibilité, stabilité du code.
+
+### Injections et instances
+Comment utiliser un service? 
+Un service doit être injecté. Il faut prêter une attention particulière au choix du niveau d'injection. Cela impactera sur son instanciation et son accéssibilité aux components et aux autres services.
+
+Trois possibilités existes:
+
+1. Dans `app.module.ts` = une seule instance accéssible par tous components et autres services de l'application.
+2. Dans `app.component.ts` = une instance accéssible à tous les components mais pas aux autres services.
+3. Dans un autre component = instance accéssible uniquement au component lui même et ses enfants.
+
+Pour mon application, je vais utilisé la première option, dans `app.module.ts`. Pour commencer, je crée un sous dossier `services` dans mon dossier `app`. Je crée le fichier `appareil.services.ts` dans lequel je glisse le code ci-dessous.
+
+```
+export class AppareilServices {
+
+}
+```
+J'injecte ce service dans `app.module.ts` et j'ajoute un array `providers`. L'import du service doit être fait en haut du fichier.
+
+![Capture d'image injectappareilservice](https://i.ibb.co/nbw4sHP/injectappareilservice.png)
+
+Maintenant que l'instance du service est créé, je vais l'intégré dans `app.component.ts`. Pour ce faire, on on le déclare comme argument dans son constructeur sans oublier de l'importé en haut du ficier :
+
+![Capture d'image constructappareilservice](https://i.ibb.co/PFtpmGK/constructappareilservice.png)
+
