@@ -175,5 +175,5 @@ On peut aller plus loin, modifions maintenant la couleur de la balise `<li>` pou
 
 ![Capture d'image de ngStyle](https://i.ibb.co/gJM4d5p/ngClass.png)
 
-
+![Capture d'image de li colored](https://i.ibb.co/Tb2dqJK/licolored.png)
 
