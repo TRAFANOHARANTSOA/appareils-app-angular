@@ -140,12 +140,12 @@ Maintenant, utilisez les crochets  `[]` pour lier le contenu de ces variables à
 
 ## Les Directives
 
-Ce sont des instructions intégrées dans le DOM. On peut en créer ou uitilisé celles fournies avec ANGULAR.
+Ce sont des instructions intégrées dans le DOM. On peut en créer ou uitilisé celles fournies avec ANGULAR. Elles sont précédés d'un `*` à l'utilisation.
 
 ### Les directives structurelles
 Pour notre application, nous allons mettre place un témoin rouge qui ne s'affiche que si l'appareil est éteint. Pour cela il nous faut utiliser la directive structurelle `*ngIf`. Un component auquel on ajoute la directive  `*ngIf="condition"`  ne s'affichera que si la condition est "truthy" (elle retourne la valeur  true  où la variable mentionnée est définie et non-nulle), comme un statement  if  classique. Testons!
 
-Dans le fichier `appreil.component.html` J'ai ajouté une `<div>` avec `style` CSS et ma directive comme ceci :
+Dans le fichier `appreil.component.html`, j'ai ajouté une `<div>` (modifie la structure du document) avec `style` CSS et ma directive comme ceci :
 
 ![Capture d'image de ngIF](https://i.ibb.co/Dftypft/ngIf.png)
 
@@ -158,3 +158,22 @@ Supposons que nous récuperons un `array` contenant les appareils et leurs état
 Chaque objet a une propriété `name` et une propriété `status`. J'utilise la deuxième directive structurelle `*ngFor="let appareil of appareils"`. Elle affiche une itération de l'objet `appareil` de l'array `appareils`. Après cette directive, j'utilise l'objet  `appareil`, à l'intérieur d'une balise HTML. Les propriétés  `name`  et  `status`  de cet objet sont passés par le property binding dans les propriétés de cet balise HTML qui sont notamments `appareilName` et `appareilStatus`.
 
 ![Capture d'image de ngFor](https://i.ibb.co/Dz7yZtk/ngFor.png)
+
+### Les directives par attribut
+
+Ces directives modifient dynamiquement le comportement d'un objet existant. Je cite `*ngModel` que j'ai utilisé en two way binding, `ngStyle`, `ngClass`.
+
+Pour l'application, je veux utiliser `ngStyle` pour changer la couleur du texte suivant l'état de l'appareil, rouge si 'éteint' et vert si 'allumé'. Cette directive prend un objet JS de type `clé:valeur`. Le style est la clé à la quelle on donne une nouvelle valeur. Dans notre cas, je crée dans `appareil.component.ts` une fonction `getColor()` et la donne en valeur à mon style :
+
+![Capture d'image de ngStyle](https://i.ibb.co/PwKGLzN/ngStyle.png)
+
+La fonction retourne `green` si allumé, `red` si éteint.
+
+![Capture d'image de ngStyle](https://i.ibb.co/zr3Ttsn/getColor.png)
+
+On peut aller plus loin, modifions maintenant la couleur de la balise `<li>` pour lui donner les même couleurs que les textes selon l'état de l'appareil. J'utilise `ngClass` pour ça. Elle prend des `class` comme clé et une condition en valeur.
+
+![Capture d'image de ngStyle](https://i.ibb.co/gJM4d5p/ngClass.png)
+
+
+
