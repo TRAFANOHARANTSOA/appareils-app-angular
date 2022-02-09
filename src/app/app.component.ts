@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppareilService } from '@angular/core';
+import { AppareilService } from './services/appareil.service';
 
 
 @Component({
