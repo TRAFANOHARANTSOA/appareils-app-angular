@@ -266,5 +266,5 @@ Maintenant que l'instance du service est créé, je vais l'intégré dans `app.c
 
 Je copie depuis  `AppComponent` l'array `appareils`. Je le colle  `AppareilService`. Je retourne dans  AppComponent  et je déclare  `appareils`  simplement comme un array de type  `any`. 
 
-:Tux:
+![Tux, the Linux mascot](/assets/images/tux.png)
 
