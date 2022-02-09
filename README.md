@@ -264,7 +264,7 @@ Maintenant que l'instance du service est créé, je vais l'intégré dans `app.c
 
 ### Utilisation des services
 
-Je copie depuis  `AppComponent` l'array `appareils`. Je le colle  `AppareilService`. Je retourne dans  AppComponent  et je déclare  `appareils`  simplement comme un array de type  `any`.
+Je copie depuis  `AppComponent` l'array `appareils`. Je le colle  `AppareilService`. Je retourne dans  AppComponent  et je déclare  `appareils`  simplement comme un array de type  `any`. :alien:
 
 
 
