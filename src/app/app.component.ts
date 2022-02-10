@@ -36,7 +36,7 @@ export class AppComponent {
     this.appareilService.switchOnAll();
   }
   onEteindre(): any {
-    if(confirm('Voulez vous confirmez l\'extinction des appareils')){
+    if(confirm('Voulez vous confirmez l\'extinction des appareils?')){
       this.appareilService.switchOffAll();
     } else {
       return null;
