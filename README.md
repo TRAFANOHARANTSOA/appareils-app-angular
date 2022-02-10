@@ -270,7 +270,7 @@ Je copie depuis  `app.component.ts` l'array `appareils`. Je le colle  dans `appa
 
 ![Capture d'image appareilsany](https://i.ibb.co/xGH8m4s/appareilany.png)
 
-A ce stade mon bouton 'Allumé tout!' ne fait qu'afficher le message 'On allume tout!' dans la console. Je vais maintenant ajouté une méthode `switchOnAll()` dans `AppareilService` pour activer cette fontionnalité. Ensuite je crée un autre bouton 'Eteindre tout!' et une autre méthode `switchOfAll()` pour tout éteindre. 
+A ce stade mon bouton 'Allumer tout!' ne fait qu'afficher le message 'On allume tout!' dans la console. Je vais maintenant ajouté une méthode `switchOnAll()` dans `AppareilService` pour activer cette fontionnalité. Ensuite je crée un autre bouton 'Eteindre tout!' et une autre méthode `switchOfAll()` pour tout éteindre. 
 
 ![Capture d'image methodswitchall](https://i.ibb.co/fQrNSrK/methodswitchall.png)
 
