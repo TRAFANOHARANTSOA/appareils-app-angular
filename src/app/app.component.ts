@@ -32,8 +32,17 @@ export class AppComponent {
     this.appareils = this.appareilService.appareils;
   }
 
-  onAllume(){
-    console.log("On allume tout!");
+  onAllume(): any{
+    this.appareilService.switchOnAll();
+  }
+  onEteindre(): any {
+    if(confirm('Voulez vous confirmez l\'extinction des appareils')){
+      this.appareilService.switchOffAll();
+    } else {
+      return null;
+    }
+    
   }
 
 }
+
