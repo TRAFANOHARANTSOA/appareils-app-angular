@@ -41,8 +41,7 @@ export class AppComponent {
     } else {
       return null;
     }
-    
-  }
+    }
 
 }
 
