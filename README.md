@@ -283,3 +283,73 @@ Je déclenche cette méthode dans `app.component.ts` dans `onAllume()` qui est r
 Je met en place un message de confirmation pou `onEteindre()` :
 
 ![Capture d'image callswitchoff](https://i.ibb.co/ZSmDKNN/callswitchoff.png)
+
+Ce qui serait bien c'est d'ajouter une fonctionnalité qui permet d'allumer ou éteindre les appareils un à la fois. Pour y arriver, j'ai besoin de faire communiquer `AppareilComponent` à `AppareilService`. 
+
+Je commence par capturer l'index de chaque appareil membre de l'array de `AppareilService` dans une propriété `indexOfAppareil` que je crée grâce au property binding `@Input()` dans `appareils.component.ts`. 
+
+![Capture d'image createindex1](https://i.ibb.co/WspW2RV/createindex2.png)
+
+Pour avoir l'index, il faut se rendre dans `app.component.html`, dans la directive `ngFor`, on donne à `i` l'index de chaque membre du tableau. On lie la à propriété personnalisée `indexOfAppareil` pour chaque itération du tableau son index. 
+
+```
+      <ul class="list-group">
+        <app-appareil *ngFor="let appareil of appareils; let i = index" 
+        [appareilName]="appareil.name"
+        [appareilStatus]="appareil.status"
+        [indexOfAppareil]="i">  </app-appareil>
+      </ul>
+```
+
+Je crée maintenant deux méthodes dans `AppareilService`, permettant d'allumer ou d'éteindre un seul appareil en fonction de son index.
+
+```
+      switchOnOne(index:number){
+        this.appareils[index].status='allumé';
+      }
+
+      switchOffOne(index:number){
+        this.appareils[index].status='éteint';
+      }
+```
+
+
+Maintenant dans `AppareilComponent`, je vais intégré le service en le construisant. Ensuite, je crée les méthodes pour allumer ou éteindr l'appareil en fonction de son statut.
+
+``` 
+ constructor(private appareilService: AppareilService) { }
+
+```
+
+``` 
+  onSwitchOn(){
+    this.appareilService.switchOnOne(this.indexOfAppareil);
+}
+  onSwitchOff(){
+    this.appareilService.switchOffOne(this.indexOfAppareil);
+}
+
+```
+
+Je termine par crée les boutons affichés sur chaque itération du tableau.
+
+```
+<li [ngClass]="{'list-group-item' :true,
+                'list-group-item-success': appareilStatus==='allumé',
+                'list-group-item-danger' : appareilStatus==='éteint'}">
+    <div 
+    style="width:15px; height:15px;background-color: red;" 
+    *ngIf="appareilStatus ==='éteint'"></div>
+    <h4 [ngStyle]="{color: getColor()}">Appreil {{ appareilName }} -- Statut {{ appareilStatus}}</h4>
+    <input type="text" class="text form-control" [(ngModel)]="appareilName">
+
+    <button class="btn btn-sm btn-success"
+    [disabled]="appareilStatus === 'allumé'"
+    (click)="onSwitchOn()">Allumer</button>
+
+    <button class="btn btn-sm btn-danger"
+    [disabled]="appareilStatus === 'éteint'"
+    (click)="onSwitchOff()">Eteindre</button>
+</li>
+
+```

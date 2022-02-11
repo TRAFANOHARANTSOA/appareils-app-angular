@@ -1,4 +1,6 @@
 import { Component, Directive, Input, OnInit } from '@angular/core';
+import { AppareilService } from '../services/appareil.service';
+
 
 @Component({
   selector: 'app-appareil',
@@ -14,11 +16,12 @@ export class AppareilComponent implements OnInit {
   appareilStatus:string | undefined;
 
   @Input()
-  index:number | undefined;
+  indexOfAppareil: number | any;
 
-  constructor() { }
+  constructor(private appareilService: AppareilService) { }
 
   ngOnInit() {
+    
   }
 
   getStatus(){
@@ -33,4 +36,12 @@ export class AppareilComponent implements OnInit {
     }
     return ''; //il faut évidement que quelque chose se passe si c'est ni allumé ni éteint
   }
+
+  onSwitchOn(){
+    this.appareilService.switchOnOne(this.indexOfAppareil);
+}
+  onSwitchOff(){
+    this.appareilService.switchOffOne(this.indexOfAppareil);
+}
+
 }
