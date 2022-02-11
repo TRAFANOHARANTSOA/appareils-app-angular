@@ -288,7 +288,17 @@ Ce qui serait bien c'est d'ajouter une fonctionnalité qui permet d'allumer ou �
 
 Je commence par capturer l'index de chaque appareil membre de l'array de `AppareilService` dans une propriété `indexOfAppareil` que je crée grâce au property binding `@Input()` dans `appareils.component.ts`. 
 
-![Capture d'image createindex1](https://i.ibb.co/WspW2RV/createindex2.png)
+```  
+  @Input() 
+  appareilName:string | undefined;
+
+  @Input()
+  appareilStatus:string | undefined;
+
+  @Input()
+  indexOfAppareil: number | any;
+  
+```
 
 Pour avoir l'index, il faut se rendre dans `app.component.html`, dans la directive `ngFor`, on donne à `i` l'index de chaque membre du tableau. On lie la à propriété personnalisée `indexOfAppareil` pour chaque itération du tableau son index. 
 
