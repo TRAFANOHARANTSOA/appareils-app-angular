@@ -341,7 +341,7 @@ Maintenant dans `AppareilComponent`, je vais intégré le service en le construi
 
 ```
 
-Je termine par crée les boutons affichés sur chaque itération du tableau.
+Je termine par les boutons affichés sur chaque itération du tableau.
 
 ```
 <li [ngClass]="{'list-group-item' :true,
