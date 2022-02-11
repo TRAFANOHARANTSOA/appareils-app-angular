@@ -7,9 +7,10 @@
         <p> Mise à jour le : {{ lastUpdate | async | date | uppercase }}</p>
       </h2>
       <ul class="list-group">
-        <app-appareil *ngFor="let appareil of appareils" 
+        <app-appareil *ngFor="let appareil of appareils; let i = index" 
         [appareilName]="appareil.name"
-        [appareilStatus]="appareil.status">  </app-appareil>
+        [appareilStatus]="appareil.status"
+        [index]="i">  </app-appareil>
       </ul>
       <button class="btn btn-success" 
       [disabled]="!isAuth" 

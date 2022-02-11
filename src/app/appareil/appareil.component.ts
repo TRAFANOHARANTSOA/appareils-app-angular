@@ -13,6 +13,9 @@ export class AppareilComponent implements OnInit {
   @Input()
   appareilStatus:string | undefined;
 
+  @Input()
+  index:number | undefined;
+
   constructor() { }
 
   ngOnInit() {
