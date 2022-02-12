@@ -90,7 +90,7 @@ La propriété de l'élément du DOM a été modifiée dynamiquement affectant a
 ### Liaison à un événement (Event binding)
 Jusque là, les données viennent du Typescript vers le Template. L'event binding vas dans le sens inverse. Les données en l'occurence des événements, viennent du Template HTML. On utilise les parenthèses  `()`  pour créer une liaison à un événement.
 
-Revenons à notre application, notre bouton pour l'instant ne fait rien. Il s'active juste au bout de 4 secondes soit une simulation d'appel à un API d'authentification. Içi, je vais ajouté l'évenement `click` en propriété à mon bouton. De même, je crée une méthode `onAllumer()`   qui n'existe pas encore `app.component.ts`.
+Revenons à notre application, notre bouton pour l'instant ne fait rien. Il s'active juste au bout de 4 secondes soit une simulation d'appel à un API d'authentification. Içi, je vais ajouter l'évenement `click` en propriété à mon bouton. De même, je crée une méthode `onAllumer()`   qui n'existe pas encore `app.component.ts`.
 
 
 
@@ -151,7 +151,7 @@ Dans le fichier `appreil.component.html`, j'ai ajouté une `<div>` (modifie la s
 
 ![Capture d'image de ngIFresult](https://i.ibb.co/McRcKyq/ng-IFresult.png)
 
-Supposons que nous récuperons un `array` contenant les appareils et leurs états depuis un serveur. Pour l'instant, je vais créé cet `array` directement dans `app.component.ts` :
+Supposons que nous récuperons un `array` contenant les appareils et leurs états depuis un serveur. Pour l'instant, je vais créer cet `array` directement dans `app.component.ts` :
 
 ![Capture d'image de Array](https://i.ibb.co/P58Gsgd/array.png)
 
@@ -197,7 +197,7 @@ On peut même utiliser une chaîne de Pipes. L'image en dessous montre que j'ai 
 
 ### Pipe Async (AsyncPipe)
 
-Je voulais parlé de `async` pour mettre en exergue sa grande utilité lors de gestion de données asynchrones, que l'application doit récupérer sur un serveur par exemples. Pour le moment nous ne communiquons pas avec un serveur, mais plus tard on le fera.
+Je voulais parler de `async` pour mettre en exergue sa grande utilité lors de gestion de données asynchrones, que l'application doit récupérer sur un serveur par exemples. Pour le moment nous ne communiquons pas avec un serveur, mais plus tard on le fera.
 
 Je vais simuler cette communication avec une `Promise` qui sera résolue au bout de 2 secondes.
 
@@ -243,7 +243,7 @@ Trois possibilités existes:
 
 
 
-Pour mon application, je vais utilisé la première option, dans `app.module.ts`. Je vais intégré à mon application un service nommé `AppareilService`  qui contiendrait les données des appareils électriques, et également des fonctions globales liées aux appareils, comme "tout allumer" ou "tout éteindre".  
+Pour mon application, je vais utiliser la première option, dans `app.module.ts`. Je vais intégrer à mon application un service nommé `AppareilService`  qui contiendrait les données des appareils électriques, et également des fonctions globales liées aux appareils, comme "tout allumer" ou "tout éteindre".  
 
 Plus tard, j'intégrerais aussi deuxième service  `AuthService`  qui s'occuperait de vérifier l'authentification de l'utilisateur, et qui pourrait également stocker des informations sur l'utilisateur actif comme son adresse mail et son pseudo.
 
@@ -258,7 +258,7 @@ J'injecte ce service dans `app.module.ts` et j'ajoute un array `providers`. L'im
 
 ![Capture d'image injectappareilservice](https://i.ibb.co/nbw4sHP/injectappareilservice.png)
 
-Maintenant que l'instance du service est créé, je vais l'intégré dans `app.component.ts`. Pour ce faire, on le déclare comme argument dans son constructeur sans oublier de l'importer en haut du fichier :
+Maintenant que l'instance du service est créé, je vais l'intégrer dans `app.component.ts`. Pour ce faire, on le déclare comme argument dans son constructeur sans oublier de l'importer en haut du fichier :
 
 ![Capture d'image constructappareilservice](https://i.ibb.co/PFtpmGK/constructappareilservice.png)
 
@@ -270,7 +270,7 @@ Je copie depuis  `app.component.ts` l'array `appareils`. Je le colle  dans `appa
 
 ![Capture d'image appareilsany](https://i.ibb.co/xGH8m4s/appareilany.png)
 
-A ce stade mon bouton 'Allumer tout!' ne fait qu'afficher le message 'On allume tout!' dans la console. Je vais maintenant ajouté une méthode `switchOnAll()` dans `AppareilService` pour activer cette fontionnalité. Ensuite je crée un autre bouton 'Eteindre tout!' et une autre méthode `switchOfAll()` pour tout éteindre. 
+A ce stade mon bouton 'Allumer tout!' ne fait qu'afficher le message 'On allume tout!' dans la console. Je vais maintenant ajouter une méthode `switchOnAll()` dans `AppareilService` pour activer cette fontionnalité. Ensuite je crée un autre bouton 'Eteindre tout!' et une autre méthode `switchOfAll()` pour tout éteindre. 
 
 ![Capture d'image methodswitchall](https://i.ibb.co/fQrNSrK/methodswitchall.png)
 
@@ -324,7 +324,7 @@ Je crée maintenant deux méthodes dans `AppareilService`, permettant d'allumer 
 ```
 
 
-Maintenant dans `AppareilComponent`, je vais intégré le service en le construisant. Ensuite, je crée les méthodes pour allumer ou éteindr l'appareil en fonction de son statut.
+Maintenant dans `AppareilComponent`, je vais intégrer le service en le construisant. Ensuite, je crée les méthodes pour allumer ou éteindr l'appareil en fonction de son statut.
 
 ``` 
  constructor(private appareilService: AppareilService) { }
